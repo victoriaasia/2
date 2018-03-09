@@ -37,7 +37,10 @@
   font-family: "msm"
   line-height: 1.5
   @include bp-mob
-    font-size: 17px
+    font-size: 18px
+  &-copy
+    font-size: 14px
+    
 
 .kas-img-mobile
   display: none
@@ -121,6 +124,8 @@
     padding: 0 30px
     > div, > a
       flex: 1
+    @include bp-mob
+      padding: 0 7vw
   &-right
     display: flex
     align-items: center
@@ -291,7 +296,7 @@
     @include bp-mob
       position: static
       width: 100%
-      padding: 30px 45px
+      padding: 30px 7vw
       text-align: left !important
     &-light
       color: #fff
@@ -331,6 +336,8 @@
       left: 0
     .kas-subtitle span::after
       right: 55px
+      @include bp-mob
+        left: 55px
   &-fourth
     .kas-content-inner
       left: 50%
@@ -341,10 +348,12 @@
         transform: translate(0%)
         top: 0
         left: 0
-        padding: 85px 45px
+        padding: 85px 7vw
     .kas-subtitle span
       &::after
         right: 100px
+        @include bp-mob
+          display: none
       &::before
         content: ''
         position: absolute
@@ -373,12 +382,16 @@
       left: 0
     .kas-subtitle span::after
       right: 80px
+      @include bp-mob
+        left: 80px
 
 
 
 .kas-footer
   border-top: $gray 1px solid
   padding: 10px 0
+  @include bp-mob
+    padding: 10px 7vw 0
   .kas-container
     display: flex
     flex-direction: column
