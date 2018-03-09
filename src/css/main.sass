@@ -1,0 +1,386 @@
+@import "colors"
+@import "mixins"
+@import "reset"
+@import "fontawesome"
+@import "animate"
+@import "fonts"
+@import "icons"
+
+
+*
+  box-sizing: border-box
+
+.kas-h1
+  font-size: 49px
+  margin: 5px 0 5px
+  @include bp-mob
+    font-size: 54px
+
+.kas-h2
+  font-size: 28px
+  margin: 15px 0
+  @include bp-mob
+    font-size: 36px
+
+.kas-h3
+  font-size: 14px
+  margin: 15px 0
+  @include bp-mob
+    font-size: 18px
+
+.kas-title
+  font-family: "msb"
+  line-height: 1.2
+
+.kas-text
+  font-size: 14px
+  font-family: "msm"
+  line-height: 1.5
+  @include bp-mob
+    font-size: 17px
+
+.kas-img-mobile
+  display: none
+  @include bp-mob
+    display: block
+  img
+    width: 100%
+
+.kas-link
+  text-decoration: none
+  color: inherit
+
+.kas-sp
+  width: 150px
+  background: $btn
+  font-size: 15px
+  color: #fff
+  font-family: "msm"
+  line-height: 1.1
+  padding: 10px 0
+  display: inline-block
+  margin: 15px 0
+  text-align: center
+  text-transform: uppercase
+  transition: all 1s ease
+
+.kas-pointer
+  cursor: pointer
+
+.kas-subtitle
+  font-size: 12px
+  font-family: "msm"
+  color: $subtitle
+  text-transform: uppercase
+  line-height: 1.2
+  span
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      background: $subtitle
+      width: 50px
+      height: 1px
+      top: 5px
+
+.kas-wrapper
+  background: url('../img/back.png') no-repeat fixed top center
+  width: 100%
+  height: auto
+  background-size: 140% auto
+  padding: 45px 0 25px
+  overflow-x: hidden
+  @include bp-table
+    padding: 30px 0
+  @include bp-mob
+    background: #fff
+
+.kas-block
+  width: 100%
+  height: auto
+
+
+.kas-container
+  max-width: 980px
+  margin: 0 auto
+  position: relative
+.kas-header
+  font-family: "msm"
+  @include bp-mob
+    background: #fff
+  .kas-container
+    border-bottom: $gray 1px solid
+    @include bp-mob
+      border-bottom: 0px
+  &-first
+    display: flex
+    align-items: center
+    justify-content: space-between
+    color: $gray
+    font-size: 13px
+    padding: 0 30px
+    > div, > a
+      flex: 1
+  &-right
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 285px
+    @include bp-mob
+      display: none
+  &-nav
+    padding: 40px
+    @include bp-mob
+      display: none
+    ul
+      list-style: none
+      text-align: center
+      font-size: 14px
+      font-family: "msb"
+      text-transform: uppercase
+      display: flex
+      align-items: center
+      justify-content: space-around
+      flex-wrap: nowrap
+      li
+        display: inline-block
+        transition: color 0.5s ease
+        &:hover
+          color: $forum
+
+.kas-search
+  &-inner
+    position: relative
+    display: flex
+    align-items: center
+    border: lighten($gray, 25%) 2px solid
+    border-top-left-radius: 20px
+    border-top-right-radius: 20px
+    border-bottom-left-radius: 20px
+    border-bottom-right-radius: 20px
+  &-field
+    background: transparent
+    padding: 5px 5px 5px 15px
+    outline: none !important
+    border: 0 !important
+    font-family: "msm"
+    color: $gray
+  &-btn
+    outline: none !important
+    border: 0 !important
+    background: transparent !important
+    padding: 0 10px 0 0
+
+.kas-logo
+  padding: 0 30px
+  @include bp-mob
+    padding: 0
+  img
+    width: 100%
+  &-woman
+    img
+      width: 280px !important
+      @include bp-mob
+        width: 40vw !important
+  &-kasp
+    width: 280px !important
+    position: absolute
+    top: 0
+    left: 0
+    @include bp-mob
+      width: 40vw !important
+      top: 15px
+      left: 50%
+      transform: translate(-50%)
+      text-align: center
+
+.kas-forum
+  text-align: right
+  @include bp-mob
+    display: none
+  &-btn
+    background: $forum
+    font-size: 14px
+    color: #fff
+    border-radius: 4px
+    padding: 15px 30px
+    transition: background 0.5s ease
+    &:hover
+      background: darken($forum, 5%)
+
+.kas-burger
+  width: 40px
+  max-width: 40px
+  height: 25px
+  display: none
+  @include bp-mob
+    display: block
+  a
+    display: block
+    height: 100%
+    position: relative
+    &:before
+      content: ' '
+      display: block
+      position: absolute
+      top: 0
+      right: 0
+      left: 0
+      height: 3px
+      border-radius: 2px
+      background: $forum
+      -webkit-box-shadow: 0 6px 0 0 $forum, 0 12px 0 0 $forum
+      box-shadow: 0 8px 0 0 $forum, 0 17px 0 0 $forum
+      -webkit-transition: all .1s linear
+      transition: all .1s linear
+
+
+.kas-first
+  background: url('../img/back1.png') no-repeat top center
+  width: 100%
+  height: auto
+  background-size: 1570px
+  margin-top: 25px
+  @include bp-mob
+    background: transparent
+
+.kas-second
+  width: 100%
+  height: 100%
+  min-height: 640px
+  position: relative
+  @include bp-mob
+    min-height: 420px
+  &-back
+    position: absolute
+    top: 0
+    left: 0
+    background: url('../img/back2.png') no-repeat top center
+    width: 100%
+    height: 100%
+    background-size: cover
+    @include bp-mob
+      background-position: 70%
+
+.kas-third
+  background: url('../img/back3.png') no-repeat top center
+  width: 100%
+  height: auto
+  background-size: 1653px
+  background-position: 85% -15px
+  padding-bottom: 20px
+  @include bp-table
+    background-position: 65% -15px
+  @include bp-mob
+    background: transparent
+
+.kas-content
+  position: relative
+  min-height: 300px
+  width: 100%
+  &:after
+    content: ""
+    display: table
+    clear: both
+  &-inner
+    width: 50%
+    min-height: 250px
+    padding: 25px
+    color: #000
+    position: absolute
+    @include bp-mob
+      position: static
+      width: 100%
+      padding: 30px 45px
+      text-align: left !important
+    &-light
+      color: #fff
+  &-link
+    text-decoration: none
+    display: block
+    &:hover
+      .kas-sp
+        background: darken($btn, 10%)
+  &-first
+    height: 530px
+    @include bp-mob
+      height: auto
+    .kas-content-inner
+      bottom: 15px
+      left: 0
+  &-second
+    height: 415px
+    z-index: 999
+    @include bp-mob
+      height: auto
+    .kas-content-inner
+      float: right
+      bottom: 25px
+      right: -25px
+    .kas-subtitle span::after
+      left: 80px
+  &-third
+    height: 390px
+    @include bp-table
+      height: 440px
+    @include bp-mob
+      height: auto
+    .kas-content-inner
+      text-align: right
+      bottom: 0
+      left: 0
+    .kas-subtitle span::after
+      right: 55px
+  &-fourth
+    .kas-content-inner
+      left: 50%
+      top: 50%
+      transform: translate(-50%)
+      text-align: center
+      @include bp-mob
+        transform: translate(0%)
+        top: 0
+        left: 0
+        padding: 85px 45px
+    .kas-subtitle span
+      &::after
+        right: 100px
+      &::before
+        content: ''
+        position: absolute
+        background: $subtitle
+        width: 50px
+        height: 1px
+        top: 5px
+        left: 100px
+  &-fifth
+    height: 490px
+    @include bp-mob
+      height: auto
+    .kas-content-inner
+      float: right
+      bottom: 0
+      right: 0
+    .kas-subtitle span::after
+      left: 60px
+  &-sixth
+    height: 460px
+    @include bp-mob
+      height: auto
+    .kas-content-inner
+      text-align: right
+      bottom: 10px
+      left: 0
+    .kas-subtitle span::after
+      right: 80px
+
+
+
+.kas-footer
+  border-top: $gray 1px solid
+  padding: 10px 0
+  .kas-container
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
