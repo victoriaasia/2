@@ -24,7 +24,7 @@
 
 .kas-h3
   font-size: 14px
-  margin: 15px 0
+  margin: 25px 0 10px
   @include bp-mob
     font-size: 18px
 
@@ -87,14 +87,14 @@
       top: 6px
 
 .kas-wrapper
-  background: url('../img/back.png') no-repeat fixed top center
+  background: url('../img/back.png') no-repeat top center
   width: 100%
   height: auto
-  background-size: 140% auto
+  background-size: cover
   padding: 45px 0 25px
   overflow-x: hidden
   @include bp-table
-    padding: 30px 0
+    padding: 13px 0 30px
   @include bp-mob
     background: #fff
 
@@ -141,7 +141,7 @@
     @include bp-mob
       display: none
   &-nav
-    padding: 40px
+    padding: 20px 40px
     @include bp-mob
       display: none
     ul
@@ -193,7 +193,8 @@
     img
       width: 280px !important
       @include bp-mob
-        width: 40vw !important
+        width: 35vw !important
+        max-width: 200px
   &-kasp
     width: 280px !important
     position: absolute
@@ -221,9 +222,9 @@
       background: darken($forum, 5%)
 
 .kas-burger
-  width: 40px
-  max-width: 40px
-  height: 25px
+  width: 30px
+  max-width: 30px
+  height: 20px
   display: none
   @include bp-mob
     display: block
@@ -241,20 +242,23 @@
       height: 3px
       border-radius: 2px
       background: $forum
-      -webkit-box-shadow: 0 6px 0 0 $forum, 0 12px 0 0 $forum
-      box-shadow: 0 8px 0 0 $forum, 0 17px 0 0 $forum
+      -webkit-box-shadow: 0 7px 0 0 $forum, 0 15px 0 0 $forum
+      box-shadow: 0 7px 0 0 $forum, 0 15px 0 0 $forum
       -webkit-transition: all .1s linear
       transition: all .1s linear
 
 
 .kas-first
-  background: url('../img/back1.png') no-repeat top center
+  background: url(../img/back1.png) no-repeat top center
   width: 100%
-  height: auto
-  background-size: 1570px
+  height: 1520px
+  background-size: auto
   margin-top: 25px
+  background-position: center -15px
   @include bp-mob
     background: transparent
+    margin-top: 10px
+    height: auto
 
 .kas-second
   width: 100%
@@ -267,7 +271,7 @@
     position: absolute
     top: 0
     left: 0
-    background: url('../img/back2.png') no-repeat top center
+    background: url('../img/back2.jpg') no-repeat top center
     width: 100%
     height: 100%
     background-size: cover
@@ -277,14 +281,13 @@
 .kas-third
   background: url('../img/back3.png') no-repeat top center
   width: 100%
-  height: auto
-  background-size: 1653px
-  background-position: 85% -15px
+  height: 960px
+  background-size: auto
+  background-position: center -15px
   padding-bottom: 20px
-  @include bp-table
-    background-position: 65% -15px
   @include bp-mob
     background: transparent
+    height: auto
 
 .kas-content
   position: relative
@@ -314,14 +317,14 @@
       .kas-sp
         background: darken($btn, 10%)
   &-first
-    height: 530px
+    height: 580px
     @include bp-mob
       height: auto
     .kas-content-inner
       bottom: 15px
       left: 0
   &-second
-    height: 415px
+    height: 470px
     z-index: 999
     @include bp-mob
       height: auto
@@ -332,7 +335,7 @@
     .kas-subtitle span::after
       left: 80px
   &-third
-    height: 390px
+    height: 440px
     @include bp-table
       height: 440px
     @include bp-mob
@@ -370,7 +373,7 @@
         top: 6px
         left: 100px
   &-fifth
-    height: 490px
+    height: 480px
     @include bp-mob
       height: auto
     .kas-content-inner

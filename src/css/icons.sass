@@ -5,10 +5,10 @@
   display: flex
   align-items: center
   justify-content: center
-  margin-bottom: 30px
+  margin-bottom: 20px
   &-icon
-    width: 48px
-    height: 52px
+    width: 50px
+    height: 60px
     border-radius: 50%
     margin: 5px
     display: flex
@@ -16,20 +16,33 @@
     justify-content: center
     text-decoration: none
     color: $icons
-    background: url('../img/icons.png')
-    background-position: -661px -873px
-    background-size: 400px
-    -webkit-transition: color .1s linear
-    transition: color .1s linear
+    background: url('../img/i/soc.png')
+    background-position: 0px 1px
+    background-size: 105px
     font-size: 18px
     position: relative
-    transition: color 0.5s ease
+    transition: all 0.25s ease
+    &::after
+      content: ''
+      position: absolute
+      background: url('../img/i/soc.png')
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background-position: -60px -2px
+      border-radius: 0
+      opacity: 0
+      transition: all 0.25s ease
+    i
+      position: relative
+      z-index: 2
     @include bp-mob
       margin: 5px 10px
     &:hover
       color: #fff
-      background-position: -719px -873px
-      border-radius: 0
+      &::after
+        opacity: 1
 
 .kas-login
   display: flex
@@ -55,77 +68,53 @@
 
 .kas-map
   position: relative
-  width: 100%
+  width: 980px
   height: 100%
+  @include bp-table
+    left: 50%
+    transform: translateX(-50%)
   @include bp-mob
     display: none
   &-icon
-    background: url('../img/icons.png')
+    // background: url('../img/i/soc.png')
     width: 64px
     height: 97px
     position: absolute
-    background-size: 360px
+    &-i
+      position: relative
+      width: 100%
+      height: 100%
+      img
+        position: absolute
+        left: 0
+        top: 0
+        transition: opacity 0.25s ease
+      &:hover .i-white
+        opacity: 0
+
+
   &-email
-    background-position: -4px -210px
-    left: 135px
-    top: 393px
-    @include bp-table
-      left: 10vw
-    &:hover
-      background-position: -76px -210px
+    left: 25px
+    top: 490px
   &-games
-    background-position: -148px -211px
-    left: 163px
-    top: 220px
-    @include bp-table
-      left: 10vw
-    &:hover
-      background-position: -220px -211px
+    left: 55px
+    top: 290px
   &-wifi
-    background-position: -76px -317px
-    left: 295px
-    top: 303px
-    @include bp-table
-      left: 28vw
-    &:hover
-      background-position: -148px -317px
+    left: 205px
+    top: 385px
   &-shopping
-    background-position: -292px -212px
-    left: 370px
-    top: 440px
-    @include bp-table
-      left: 37vw
-    &:hover
-      background-position: -4px -317px
-  &-burlgar
-    background-position: -220px -108px
-    left: 375px
-    top: 150px
-    @include bp-table
-      left: 39vw
-    &:hover
-      background-position: -148px -108px
-  &-messengers
-    background-position: -292px -4px
     left: 325px
-    top: 10px
-    @include bp-table
-      left: 30vw
-    &:hover
-      background-position: -292px -108px
+    top: 545px
+  &-burlgar
+    left: 325px
+    top: 207px
+  &-messengers
+    left: 245px
+    top: 55px
   &-apps
-    background-position: -3px -3px
-    left: 560px
-    top: 395px
-    @include bp-table
-      left: 60vw
-    &:hover
-      background-position: -75px -3px
+    left: 570px
+    top: 480px
   &-banking
-    background-position: -148px -3px
-    left: 469px
-    top: 298px
-    @include bp-table
-      left: 47vw
-    &:hover
-      background-position: -220px -3px
+    left: 420px
+    top: 370px
+    
