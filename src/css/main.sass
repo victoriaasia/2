@@ -21,6 +21,8 @@
   margin: 15px 0
   @include bp-mob
     font-size: 36px
+    br
+      display: none
 
 .kas-h3
   font-size: 14px
@@ -267,6 +269,9 @@
   position: relative
   @include bp-mob
     min-height: 420px
+    background: url('../img/mob/img6.jpeg') no-repeat
+    background-size: cover
+    background-position: 100% 100%
   &-back
     position: absolute
     top: 0
@@ -276,7 +281,8 @@
     height: 100%
     background-size: cover
     @include bp-mob
-      background-position: 70%
+      background: transparent
+      // background-position: 70%
 
 .kas-third
   background: url('../img/back3.png') no-repeat top center
@@ -358,7 +364,7 @@
         transform: translate(0%)
         top: 0
         left: 0
-        padding: 85px 7vw
+        padding: 120px 7vw
     .kas-subtitle span
       &::after
         right: 100px
